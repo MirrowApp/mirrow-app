@@ -1,0 +1,56 @@
+---
+import Mirrow from "./svgs/Mirrow.astro";
+import Hashtag from "./svgs/Hashtag.astro";
+---
+
+<div
+  class="border-[#383838] fixed top-0 left-0 right-0 border p-4 rounded-full w-full flex justify-between max-w-3xl mx-auto my-8"
+>
+  <div class="flex mx-auto gap-4">
+    <span class="my-auto"><Mirrow /></span>
+
+    <p
+      class="text-4xl font-black font-inter my-auto chroma-text chrome-text-animation"
+    >
+      mirrow
+    </p>
+  </div>
+  <div class="my-auto">
+    <Hashtag />
+  </div>
+</div>
+
+<style>
+  @keyframes chroma-text-animation {
+    0% {
+      background-position: 100% 0;
+      filter: blur(1px);
+    }
+    100% {
+      background-position: 0 0;
+      filter: blur(0px);
+    }
+  }
+
+  .chroma-text {
+    background: linear-gradient(
+      90deg,
+      #fff 0,
+      #fff 50.33%,
+      #c679c4 40%,
+      #fa3d1d 45%,
+      #ffb005 50%,
+      #e1e1fe 55%,
+      #0358f7 60%,
+      transparent 66.67%,
+      transparent
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .chrome-text-animation {
+    animation: chroma-text-animation 1.5s ease-in-out forwards;
+  }
+</style>

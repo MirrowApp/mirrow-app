@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 24" width="44" height="24"> 
+	<defs> 
+		<mask id="edge">
+			<rect width="44" height="24" x="0" y="0" fill="white" /> 
+			<circle r="15.5" cx="14" cy="12" fill="black" /> 
+		</mask> 
+	</defs>
+	<circle cx="14" cy="12" r="12" fill="white" />
+	<g mask="url(#edge)">
+	<circle cx="32" cy="12" r="12" fill="white" />
+	</g>
+</svg> 

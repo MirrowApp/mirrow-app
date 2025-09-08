@@ -1,0 +1,28 @@
+<svg viewBox="0 0 44 24" width="88" height="44">
+  <defs>
+    <mask id="edge">
+      <rect width="44" height="24" x="0" y="0" fill="white"></rect>
+      <circle r="15.5" cx="14" cy="12" fill="black"></circle>
+    </mask>
+  </defs>
+  <circle cx="14" cy="12" r="12" fill="white"></circle>
+  <g mask="url(#edge)">
+    <circle cx="10" cy="12" r="12" fill="white" class="appear-animated"
+    ></circle>
+  </g>
+</svg>
+
+<style>
+  @keyframes poppin {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(22px);
+    }
+  }
+
+  .appear-animated {
+    animation: poppin 1.5s ease-out forwards;
+  }
+</style>
