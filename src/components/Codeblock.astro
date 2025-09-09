@@ -23,8 +23,13 @@ const code = String.raw`svg {
       dur: 2s
       repeat: infinite
     }
+  }
 
-    on:click { fill = "lime" }
+  hover, active {
+    #pulse {
+      cy: 150
+      r: 60
+    }
   }
 }
 
@@ -66,10 +71,10 @@ const highlighted = highlightJs(code);
 <pre
   class="overflow-x-scroll overflow-y-hidden relative rounded-3xl group border hover:border-[#686868] border-[#383838] transition-all z-0 duration-500 text-sm text-slate-100 shadow-sm max-w-3xl backdrop-blur-xs p-4">
   <div class="language-js" set:html={highlighted} />
-  <div class="absolute top-3/4 left-3/4 -translate-1/2 z-10 hidden sm:flex border transition-all duration-500 group-hover:border-[#686868] border-[#383838] rounded-2xl p-8 text-white">
+  <div class="absolute top-3/4 left-3/4 -translate-1/2 z-10 hidden sm:flex border transition-all bg-[#101010] duration-500 group-hover:border-[#686868] border-[#383838] rounded-2xl p-8 text-white">
     <svg viewBox="0 0 200 200" width="100" height="100" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
 
-    <circle id="pulse" cx="100" cy="100" r="40" fill="hotpink" onclick="this.setAttribute('fill','lime')">
+    <circle id="pulse" cx="100" cy="100" r="40" fill="hotpink">
         <animate attributeName="r" from="40" to="60" dur="2s" repeatCount="indefinite" />
     </circle>
 
@@ -79,6 +84,17 @@ const highlighted = highlightJs(code);
 </pre>
 
 <style>
+  svg #pulse {
+    transition:
+      r 400ms,
+      cy 600ms;
+  }
+  svg:hover #pulse,
+  svg:active #pulse {
+    cy: 150px;
+    r: 60px;
+  }
+
   :global(pre div.language-js) {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
       "Liberation Mono", "Courier New", monospace;
