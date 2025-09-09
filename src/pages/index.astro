@@ -1,24 +1,46 @@
 ---
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
+import Codeblock from "../components/Codeblock.astro";
+import Footer from "../components/Footer.astro";
+import Particles from "../components/Particles.astro";
+import Hashtag from "../components/svgs/Hashtag.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <Header />
-  <div class="flex flex-col m-auto gap-4">
-    <h4 class="text-lg mx-auto text-[#aaa]">
-      Design, animate, and export SVGs from one file.
-    </h4>
-    <h1 class="text-5xl font-black text-center m-auto max-w-2xl">
-      SVGs. One file. Zero fuss.
-    </h1>
-    <button
-      class="px-8 py-4 text-xl font-bold w-fit mx-auto my-8 hover:-translate-y-1 transition-all duration-300 bg-white rounded-2xl text-black"
-    >
-      Coming soon
-    </button>
+  <div class="mx-auto max-w-3xl flex flex-col">
+    <Particles />
+    <Header />
+    <div class="flex flex-col m-auto gap-4">
+      <div class="flex flex-col my-24">
+        <h4 class="text-lg mx-auto text-[#aaa]">
+          Design, animate, and export SVGs from one file.
+        </h4>
+        <h1 class="text-5xl font-black text-center m-auto max-w-2xl">
+          SVGs. One file. Zero fuss. 🪐
+        </h1>
+        <button
+          class="px-8 py-4 text-xl font-bold w-fit mx-auto my-8 hover:-translate-y-1 transition-all duration-300 bg-white rounded-2xl text-black"
+        >
+          Coming soon
+        </button>
+      </div>
+      <Codeblock />
+      <div class="my-14">
+        <div class="text-4xl font-bold flex space-x-4">
+          <Hashtag />
+          <p class="my-auto">What is mirrow?</p>
+        </div>
+        <p class="text-lg/8 my-6">
+          Mirrow makes SVGs effortless. Design, style, and animate everything in
+          <span class="font-black">one file</span> — no extra CSS or scripts. Write
+          once, and get ready-to-use code for React, Svelte, and beyond.
+        </p>
+      </div>
+      <Footer />
+    </div>
   </div>
 </Layout>

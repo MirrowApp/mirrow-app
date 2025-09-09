@@ -1,0 +1,87 @@
+---
+const code = String.raw`svg {
+  size: (200,200)
+
+  circle {
+    id: "pulse"
+    at: (100,100)
+    r: 40
+    fill: "hotpink"
+
+    animate: {
+      prop: "r"
+      from: 40
+      to: 60
+      dur: 2s
+      repeat: infinite
+    }
+
+    on:click {
+      fill = "lime"
+    }
+  }
+}
+`;
+
+const highlightJs = (src: string) => {
+  let html = src;
+
+  const placeholders: string[] = [];
+  const protectRe =
+    /\/\*[\s\S]*?\*\/|\/\/.*?$|`[^`]*`|\"([^\"\\]|\\.)*\"|'([^'\\]|\\.)*'/gm;
+  html = html.replace(protectRe, (m) => {
+    const cls =
+      m.startsWith("/*") || m.startsWith("//") ? "tok-comment" : "tok-string";
+    const idx = placeholders.push(`<span class=\"${cls}\">${m}</span>`) - 1;
+    return `__PH_${idx}__`;
+  });
+
+  html = html.replace(
+    /\b\d+(?:\.\d+)?\b/g,
+    (m) => `<span class=\"tok-number\">${m}</span>`
+  );
+  html = html.replace(
+    /\b(?:const|let|var|class|return|async|await|try|catch|throw|new|if|else|for|while|function)\b(?!\s*=)/g,
+    (m) => `<span class=\"tok-kw\">${m}</span>`
+  );
+  html = html.replace(
+    /\b(?:null|undefined|true|false)\b/g,
+    (m) => `<span class=\"tok-builtin\">${m}</span>`
+  );
+
+  html = html.replace(/__PH_(\d+)__/g, (_m, i) => placeholders[Number(i)]);
+  return html;
+};
+
+const highlighted = highlightJs(code);
+---
+
+<pre
+  class="overflow-x-auto rounded-3xl border hover:border-[#686868] border-[#383838] transition-all z-0 duration-500 text-sm text-slate-100 shadow-sm max-w-3xl backdrop-blur-xs p-4">
+  <code aria-label="JavaScript example" class="language-js" set:html={highlighted} />
+</pre>
+
+<style>
+  :global(pre code.language-js) {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+    line-height: 1.6;
+    display: block;
+    white-space: pre;
+  }
+  :global(.tok-kw) {
+    color: #34d399; /* emerald-400 */
+  }
+  :global(.tok-string) {
+    color: #7dd3fc; /* sky-300 */
+  }
+  :global(.tok-number) {
+    color: #c4b5fd; /* violet-300 */
+  }
+  :global(.tok-comment) {
+    color: #94a3b8; /* slate-400 */
+  }
+  :global(.tok-builtin) {
+    color: #fbbf24; /* amber-400 */
+  }
+</style>

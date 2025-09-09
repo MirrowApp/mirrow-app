@@ -1,5 +1,5 @@
-<div class="border border-[#383838] rounded-full p-4 group cursor-pointer">
-  <svg viewBox="3.9 6.5 11.6 9" width="30" height="30">
+<div class="border border-[#383838] hover:bg-white transition-all duration-300 rounded-full p-3 group cursor-pointer">
+  <svg viewBox="3.9 6.5 11.6 9" width="24" height="24">
     <g class="">
       <rect
         x="4"
@@ -42,6 +42,10 @@
     stroke: #ccc;
     stroke-width: 1;
     stroke-linecap: round;
-    transition: all 0.5s;
+    transition: all 0.3s;
+  }
+
+  .group:hover .stroke-setter {
+    stroke: #000;
   }
 </style>
