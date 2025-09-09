@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import Particles from "../components/Particles.astro";
 ---
 
 <!doctype html>
@@ -10,7 +9,40 @@ import Particles from "../components/Particles.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Basic Meta -->
     <title>mirrow</title>
+    <meta
+      name="description"
+      content="Design, animate, and export SVGs from one file. Open-source, privacy-focused, client-side SVG editor for React, Svelte, and beyond."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mirrow.app/" />
+    <meta property="og:title" content="Mirrow - SVGs. One file. Zero fuss." />
+    <meta
+      property="og:description"
+      content="Design, animate, and export SVGs from one file. Open-source, privacy-focused, client-side SVG editor for React, Svelte, and beyond."
+    />
+    <meta property="og:image" content="https://mirrow.app/og-image.png" />
+    <meta
+      property="og:image:alt"
+      content="Mirrow - SVG design and export tool"
+    />
+    <meta property="og:site_name" content="Mirrow" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta
+      name="twitter:description"
+      content="Design, animate, and export SVGs from one file. Open-source, privacy-focused, client-side SVG editor for React, Svelte, and beyond."
+    />
+
+    <!-- Additional Meta -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mirrow.app/" />
   </head>
   <body class="bg-black text-white min-h-screen flex flex-col">
     <slot />

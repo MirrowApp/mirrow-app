@@ -11,15 +11,19 @@ import Hashtag from "../components/svgs/Hashtag.astro";
 ---
 
 <Layout>
-  <div class="mx-auto max-w-3xl flex flex-col">
+  <div class="mx-auto max-w-3xl px-4 flex flex-col">
     <Particles />
     <Header />
     <div class="flex flex-col m-auto gap-4">
-      <div class="flex flex-col my-24">
-        <h4 class="text-lg mx-auto text-[#aaa]">
+      <div class="flex flex-col sm:my-24 my-10">
+        <h4
+          class="text-xs sm:text-lg sm:text-left text-center mx-auto text-[#aaa]"
+        >
           Design, animate, and export SVGs from one file.
         </h4>
-        <h1 class="text-5xl font-black text-center m-auto max-w-2xl">
+        <h1
+          class="text-3xl sm:text-5xl font-black text-center m-auto max-w-2xl"
+        >
           SVGs. One file. Zero fuss. 🪐
         </h1>
         <button

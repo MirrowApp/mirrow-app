@@ -1,0 +1,202 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <div class="mx-auto max-w-4xl px-4 py-8">
+    <Header />
+
+    <div class="prose prose-invert max-w-none">
+      <h1 class="text-4xl font-bold mb-8">Privacy Policy & Terms of Service</h1>
+
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Privacy Policy</h2>
+        <p class="text-sm text-gray-400 mb-6">
+          Last updated: {new Date().toLocaleDateString()}
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Information We Collect</h3>
+        <p class="mb-4">
+          Mirrow is an open-source application that prioritizes your privacy. We
+          do not collect, store, or process any personal information:
+        </p>
+        <ul class="list-disc pl-6 mb-6">
+          <li>
+            <strong>No Data Collection:</strong> We do not collect any personal information,
+            usage data, or analytics
+          </li>
+          <li>
+            <strong>No User Accounts:</strong> Mirrow works entirely client-side
+            without requiring account creation
+          </li>
+          <li>
+            <strong>No Server Storage:</strong> All your work remains on your device
+            - we don't host or store your content
+          </li>
+          <li>
+            <strong>No Telemetry:</strong> We do not track your usage, behavior,
+            or any other data
+          </li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mb-3">How We Use Your Information</h3>
+        <p class="mb-4">
+          Since we don't collect any information, there's nothing to use. Mirrow
+          operates entirely in your browser and is compiled on your server
+          without sending data to our servers.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Data Storage and Security</h3>
+        <p class="mb-4">
+          Your data never leaves your device. All SVG files, code, and projects
+          you create with Mirrow are stored locally in your browser. We have no
+          access to your work, and it's protected by your device's security
+          measures.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Third-Party Services</h3>
+        <p class="mb-4">
+          Mirrow is a static website that may use CDN services for hosting
+          files, but these services do not collect personal data. The
+          application itself runs entirely in your browser without external
+          dependencies that could access your data.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Your Rights</h3>
+        <p class="mb-4">
+          Since we don't collect any personal information, there's no data to
+          access, update, or delete. You have complete control over your work as
+          it remains on your device. If you have any privacy concerns, you can
+          contact us at privacy@mirrow.app.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Cookies and Tracking</h3>
+        <p class="mb-4">
+          Mirrow may use essential cookies for basic functionality (like
+          remembering your preferences), but we do not use any tracking cookies,
+          analytics, or advertising cookies. Your browsing activity is not
+          monitored or recorded.
+        </p>
+      </div>
+
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Terms of Service</h2>
+        <p class="text-sm text-gray-400 mb-6">
+          Last updated: {new Date().toLocaleDateString()}
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Acceptance of Terms</h3>
+        <p class="mb-4">
+          By accessing or using Mirrow, you agree to be bound by these Terms of
+          Service and all applicable laws and regulations. If you do not agree
+          with any of these terms, you are prohibited from using this service.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Description of Service</h3>
+        <p class="mb-4">
+          Mirrow is an open-source, client-side web application that allows
+          users to design, animate, and export SVG graphics. The service
+          provides tools for creating vector graphics and generating code for
+          various frameworks and platforms, all running locally in your browser.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">User Accounts</h3>
+        <p class="mb-4">
+          Mirrow does not require user accounts or registration. The application
+          works entirely client-side without any server-side authentication or
+          data storage.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Acceptable Use</h3>
+        <p class="mb-4">You agree not to use Mirrow to:</p>
+        <ul class="list-disc pl-6 mb-6">
+          <li>Create or distribute illegal, harmful, or offensive content</li>
+          <li>Violate any intellectual property rights</li>
+          <li>Attempt to gain unauthorized access to our systems</li>
+          <li>Interfere with the proper functioning of the service</li>
+          <li>Use the service for any commercial purpose without permission</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mb-3">Intellectual Property</h3>
+        <p class="mb-4">
+          You retain complete ownership of the content you create using Mirrow.
+          Since all work is done client-side and never transmitted to our
+          servers, we have no access to or claim over your creations. Mirrow
+          itself is open-source software, and you may view, modify, and
+          distribute the source code according to its license.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Service Availability</h3>
+        <p class="mb-4">
+          Since Mirrow is a static website, it generally has high availability.
+          However, as an open-source project, we cannot guarantee uninterrupted
+          access. The application can also be self-hosted or run locally if
+          needed.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Limitation of Liability</h3>
+        <p class="mb-4">
+          To the maximum extent permitted by law, Mirrow shall not be liable for
+          any indirect, incidental, special, consequential, or punitive damages,
+          including but not limited to loss of profits, data, or use, arising
+          out of or relating to your use of the service.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Termination</h3>
+        <p class="mb-4">
+          Since Mirrow is a client-side application with no user accounts,
+          there's no access to terminate. You can stop using the service at any
+          time by simply closing your browser or navigating away from the
+          website.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Changes to Terms</h3>
+        <p class="mb-4">
+          We reserve the right to modify these terms at any time. Since there
+          are no user accounts, we will notify users of significant changes by
+          updating this page. Your continued use of Mirrow after changes
+          constitutes acceptance of the new terms.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Open Source</h3>
+        <p class="mb-4">
+          Mirrow is open-source software. You can view, modify, and distribute
+          the source code according to its license. This transparency ensures
+          you can verify our privacy claims and even run your own instance of
+          the application.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-3">Governing Law</h3>
+        <p class="mb-4">
+          These terms shall be governed by and construed in accordance with the
+          laws of [Your Jurisdiction], without regard to conflict of law
+          principles.
+        </p>
+      </div>
+    </div>
+
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .prose {
+    color: #e5e7eb;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3 {
+    color: #ffffff;
+  }
+
+  .prose ul {
+    color: #d1d5db;
+  }
+
+  .prose strong {
+    color: #ffffff;
+  }
+</style>
