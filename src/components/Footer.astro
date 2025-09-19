@@ -1,6 +1,15 @@
 ---
 import Mirrow from "./svgs/Mirrow.astro";
 import Hashtag from "./svgs/Hashtag.astro";
+import XLogo from "./svgs/xLogo.astro";
+import Bluesky from "./svgs/Bluesky.astro";
+import Mastodon from "./svgs/Mastodon.astro";
+
+const components = [
+  { Component: XLogo, href: "https://x.com/mirrow_app" },
+  { Component: Bluesky, href: "https://bsky.app/profile/mirrow.app" },
+  { Component: Mastodon, href: "https://techhub.social/@mirrow" },
+];
 
 const year = new Date().getFullYear();
 ---
@@ -12,27 +21,18 @@ const year = new Date().getFullYear();
     <div
       class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
     >
-      <div class="flex items-center gap-3">
-        <span class="shrink-0"><Mirrow /></span>
-        <span class="text-lg font-semibold flex"
-          ><p class="my-auto">mirrow</p><svg
-            viewBox="0 0 50 20"
-            width="50"
-            height="20"
-            class="my-auto"
-          >
-            <text
-              x="0"
-              y="16"
-              font-family="Inter, sans-serif"
-              font-size="18"
-              fill="none"
-              stroke="white"
-              stroke-width="1"
-              paint-order="stroke fill">.app</text
+      <div class="flex gap-4 my-auto mr-auto">
+        {
+          components.map(({ Component, href }) => (
+            <a
+              href={href}
+              target="_blank"
+              class="hover:fill-white hover:-translate-y-0.5 fill-[#aaa] my-auto transition-all duration-300"
             >
-          </svg></span
-        >
+              <Component />
+            </a>
+          ))
+        }
       </div>
 
       <nav

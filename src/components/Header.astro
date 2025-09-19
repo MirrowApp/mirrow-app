@@ -1,14 +1,6 @@
 ---
 import Mirrow from "./svgs/Mirrow.astro";
-import XLogo from "./svgs/xLogo.astro";
-import Bluesky from "./svgs/Bluesky.astro";
 import Github from "./svgs/Github.astro";
-
-const components = [
-  { Component: XLogo, href: "https://x.com/mirrow_app" },
-  { Component: Bluesky, href: "https://bsky.app/profile/mirrow.app" },
-  { Component: Github, href: "https://github.com/MirrowApp" },
-];
 ---
 
 <div
@@ -24,19 +16,23 @@ const components = [
         mirrow
       </p>
     </a>
-    <div class="flex gap-4 my-auto ml-auto">
-      {
-        components.map(({ Component, href }) => (
-          <a
-            href={href}
-            target="_blank"
-            class="hover:fill-white hover:-translate-y-0.5 fill-[#aaa] my-auto transition-all duration-300"
-          >
-            <Component />
-          </a>
-        ))
-      }
+    <div class="flex px-6 my-auto font-medium gap-8">
+      <a href="">Articles</a>
+      <a href="">Docs</a>
+      <a href="" class="flex gap-2 items-center"
+        ><p>Playground</p>
+        <div class="px-2 py-0.5 text-sm text-black rounded-full bg-pink-600">
+          NEW
+        </div>
+      </a>
     </div>
+    <a
+      href="https://github.com/MirrowApp"
+      target="_blank"
+      class="hover:fill-white ml-auto hover:-translate-y-0.5 size-10 fill-[#aaa] my-auto transition-all duration-300"
+    >
+      <Github />
+    </a>
   </div>
 </div>
 
