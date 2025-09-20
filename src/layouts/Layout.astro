@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header";
 import "../styles/global.css";
 ---
 
@@ -45,7 +47,10 @@ import "../styles/global.css";
     <link rel="canonical" href="https://mirrow.app/" />
   </head>
   <body class="bg-black text-white min-h-screen flex flex-col">
-    <slot />
+    <Header client:load />
+    <div class="md:mt-24 flex-1">
+      <slot />
+    </div>
   </body>
 </html>
 

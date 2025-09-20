@@ -1,9 +1,11 @@
 # Mirrow Element Attribute Reference
+
 Generated automatically by scripts/generate-attribute-doc.mjs on 2025-09-20T03:30:38.785Z.
 
 Each section enumerates the attributes accepted by a Mirrow element, the expected value type, whether the attribute is required, and any compiler expansions applied to the attribute.
 
 ## <a>
+
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
 - `clipRule` — type string; maps to `clip-rule`.
@@ -57,21 +59,21 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <animate>
+
 - `accelerate` — type number.
 - `accumulate` — type string.
 - `additive` — type string.
-- `attributeName` — type string.
 - `attributeType` — type string.
 - `autoReverse` — type boolean; maps to `autoreverse`.
 - `begin` — type string.
-- `by` — type string.
+- `by` — type number.
 - `calcMode` — type string.
 - `class` — type string.
 - `decelerate` — type number.
 - `dur` — type string.
 - `end` — type string.
 - `fill` — type string.
-- `from` — type string.
+- `from` — type number.
 - `href` — type string.
 - `id` — type string.
 - `keySplines` — type string.
@@ -79,12 +81,13 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `lang` — type string.
 - `max` — type string.
 - `min` — type string.
-- `repeatCount` — type string.
+- `prop` — type string.
+- `repeat` — type number.
 - `repeatDur` — type string.
 - `restart` — type string.
 - `style` — type string.
 - `tabIndex` — type number; maps to `tabindex`.
-- `to` — type string.
+- `to` — type number.
 - `values` — type string.
 - `xlinkHref` — type string; maps to `xlink:href`.
 - `xmlBase` — type string; maps to `xml:base`.
@@ -92,6 +95,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <animateMotion>
+
 - `accelerate` — type number.
 - `accumulate` — type string.
 - `additive` — type string.
@@ -130,6 +134,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <animateTransform>
+
 - `accelerate` — type number.
 - `accumulate` — type string.
 - `additive` — type string.
@@ -166,6 +171,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <circle>
+
 - `at` — type tuple[2] (number, number); maps to `cx`, `cy`.
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
@@ -214,6 +220,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <clipPath>
+
 - `class` — type string.
 - `clipPathUnits` — type string.
 - `id` — type string.
@@ -229,6 +236,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <defs>
+
 - `class` — type string.
 - `id` — type string.
 - `lang` — type string.
@@ -242,6 +250,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <desc>
+
 - `class` — type string.
 - `id` — type string.
 - `lang` — type string.
@@ -252,6 +261,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <discard>
+
 - `begin` — type string.
 - `class` — type string.
 - `href` — type string.
@@ -265,6 +275,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <ellipse>
+
 - `at` — type tuple[2] (number, number); maps to `cx`, `cy`.
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
@@ -312,6 +323,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feBlend>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `id` — type string.
@@ -328,6 +340,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feColorMatrix>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `id` — type string.
@@ -344,6 +357,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feComponentTransfer>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `id` — type string.
@@ -358,6 +372,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feComposite>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `id` — type string.
@@ -378,6 +393,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feConvolveMatrix>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `bias` — type number.
 - `class` — type string.
@@ -401,6 +417,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feDiffuseLighting>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `diffuseConstant` — type number.
@@ -419,6 +436,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feDisplacementMap>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `id` — type string.
@@ -437,6 +455,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `yChannelSelector` — type string.
 
 ## <feDistantLight>
+
 - `azimuth` — type number.
 - `class` — type string.
 - `elevation` — type number.
@@ -449,6 +468,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feDropShadow>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `dx` — type number.
@@ -468,6 +488,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feFlood>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `floodColor` — type string; maps to `flood-color`.
@@ -483,6 +504,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feFuncA>
+
 - `amplitude` — type number.
 - `class` — type string.
 - `exponent` — type number.
@@ -500,6 +522,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feFuncB>
+
 - `amplitude` — type number.
 - `class` — type string.
 - `exponent` — type number.
@@ -517,6 +540,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feFuncG>
+
 - `amplitude` — type number.
 - `class` — type string.
 - `exponent` — type number.
@@ -534,6 +558,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feFuncR>
+
 - `amplitude` — type number.
 - `class` — type string.
 - `exponent` — type number.
@@ -551,6 +576,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feGaussianBlur>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `edgeMode` — type string.
@@ -567,6 +593,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feImage>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `crossOrigin` — type string; maps to `crossorigin`.
@@ -584,6 +611,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feMerge>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `id` — type string.
@@ -597,6 +625,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feMergeNode>
+
 - `class` — type string.
 - `id` — type string.
 - `in` — type string.
@@ -608,6 +637,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feMorphology>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `id` — type string.
@@ -624,6 +654,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feOffset>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `dx` — type number.
@@ -640,6 +671,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <fePointLight>
+
 - `at` — type tuple[3] (number, number, number); maps to `x`, `y`, `z`.
 - `class` — type string.
 - `id` — type string.
@@ -651,6 +683,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feSpecularLighting>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `id` — type string.
@@ -670,6 +703,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feSpotLight>
+
 - `at` — type tuple[3] (number, number, number); maps to `x`, `y`, `z`.
 - `class` — type string.
 - `id` — type string.
@@ -684,6 +718,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feTile>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `id` — type string.
@@ -698,6 +733,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <feTurbulence>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `baseFrequency` — type string.
 - `class` — type string.
@@ -716,6 +752,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <filter>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `filterRes` — type number.
@@ -736,6 +773,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <foreignObject>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
@@ -782,6 +820,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <g>
+
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
 - `clipRule` — type string; maps to `clip-rule`.
@@ -826,6 +865,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <image>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
@@ -877,6 +917,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <line>
+
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
 - `clipRule` — type string; maps to `clip-rule`.
@@ -924,6 +965,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <linearGradient>
+
 - `class` — type string.
 - `from` — type tuple[2] (number, number); maps to `x1`, `y1`.
 - `gradientTransform` — type string.
@@ -944,6 +986,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <marker>
+
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
 - `clipRule` — type string; maps to `clip-rule`.
@@ -996,6 +1039,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <mask>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `id` — type string.
@@ -1014,6 +1058,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <metadata>
+
 - `class` — type string.
 - `id` — type string.
 - `lang` — type string.
@@ -1024,6 +1069,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <mpath>
+
 - `class` — type string.
 - `href` — type string.
 - `id` — type string.
@@ -1036,6 +1082,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <path>
+
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
 - `clipRule` — type string; maps to `clip-rule`.
@@ -1083,6 +1130,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <pattern>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `href` — type string.
@@ -1105,6 +1153,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <polygon>
+
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
 - `clipRule` — type string; maps to `clip-rule`.
@@ -1151,6 +1200,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <polyline>
+
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
 - `clipRule` — type string; maps to `clip-rule`.
@@ -1197,6 +1247,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <radialGradient>
+
 - `at` — type tuple[2] (number, number); maps to `cx`, `cy`.
 - `class` — type string.
 - `focus` — type tuple[2] (number, number); maps to `fx`, `fy`.
@@ -1219,6 +1270,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <rect>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
@@ -1267,6 +1319,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <script>
+
 - `class` — type string.
 - `crossOrigin` — type string; maps to `crossorigin`.
 - `href` — type string.
@@ -1282,6 +1335,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <set>
+
 - `attributeName` — type string.
 - `attributeType` — type string.
 - `begin` — type string.
@@ -1306,6 +1360,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <stop>
+
 - `class` — type string.
 - `id` — type string.
 - `lang` — type string.
@@ -1319,6 +1374,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <style>
+
 - `class` — type string.
 - `id` — type string.
 - `lang` — type string.
@@ -1333,6 +1389,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <svg>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `baseProfile` — type string.
 - `box` — type tuple[4] (number, number, number, number); maps to `viewBox`.
@@ -1387,6 +1444,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <switch>
+
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
 - `clipRule` — type string; maps to `clip-rule`.
@@ -1431,6 +1489,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <symbol>
+
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
 - `clipRule` — type string; maps to `clip-rule`.
@@ -1478,6 +1537,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <text>
+
 - `alignmentBaseline` — type string; maps to `alignment-baseline`.
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `baselineShift` — type string; maps to `baseline-shift`.
@@ -1550,6 +1610,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <textPath>
+
 - `alignmentBaseline` — type string; maps to `alignment-baseline`.
 - `baselineShift` — type string; maps to `baseline-shift`.
 - `class` — type string.
@@ -1622,6 +1683,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <title>
+
 - `class` — type string.
 - `id` — type string.
 - `lang` — type string.
@@ -1632,6 +1694,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <tspan>
+
 - `alignmentBaseline` — type string; maps to `alignment-baseline`.
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `baselineShift` — type string; maps to `baseline-shift`.
@@ -1704,6 +1767,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <use>
+
 - `at` — type tuple[2] (number, number); maps to `x`, `y`.
 - `class` — type string.
 - `clipPath` — type string; maps to `clip-path`.
@@ -1752,6 +1816,7 @@ Each section enumerates the attributes accepted by a Mirrow element, the expecte
 - `xmlSpace` — type string; maps to `xml:space`.
 
 ## <view>
+
 - `class` — type string.
 - `id` — type string.
 - `lang` — type string.

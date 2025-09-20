@@ -1,70 +1,77 @@
 ---
 import BaseLayout from "./Layout.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import DocsSearchNav from "../components/DocsSearchNav.tsx";
 import manifest from "../data/docs-manifest.json";
 
 const { slug = "" } = Astro.props;
-const navItems = [
-  { slug: "overview", title: "Overview", name: "Overview" },
-  ...(manifest.elements ?? []),
-];
+const navItems = manifest.elements ?? [];
 ---
 
 <BaseLayout>
   <div class="flex min-h-screen bg-black text-white">
-    <div class="flex w-full flex-col h-max">
-      <Header />
-      <div class="flex top-0">
-        <aside
-          class="min-h-0 max-h-full flex flex-col w-64 max-w-full border-r fixed top-0 border-zinc-700/60 px-6 py-8 md:w-72"
+    <aside
+      id="docs-nav"
+      class="fixed inset-y-0 left-0 z-40 flex w-64 max-w-full -translate-x-full flex-col border-r border-zinc-700/60 px-6 py-8 transition-transform duration-200 ease-in-out md:w-72 md:translate-x-0"
+      data-open="false"
+      tabindex="-1"
+    >
+      <div class="flex items-start justify-between gap-4 md:block">
+        <div class="space-y-2">
+          <p class="text-[0.65rem] uppercase tracking-[0.3em] text-zinc-500">
+            Index
+          </p>
+          <h1 class="text-lg font-semibold text-zinc-100">Mirrow docs</h1>
+        </div>
+        <button
+          type="button"
+          class="rounded-xl border border-white/10 px-3 py-2 text-sm font-medium text-white transition hover:border-white/30 hover:text-white md:hidden"
+          data-docs-nav-close
         >
-          <div class="space-y-2">
-            <p class="text-[0.65rem] uppercase tracking-[0.3em] text-zinc-500">
-              Index
-            </p>
-            <h1 class="text-lg font-semibold text-zinc-100">Mirrow docs</h1>
-          </div>
-          <nav class="mt-6 flex-1 flex flex-col gap-1.5 overflow-y-auto">
-            {
-              navItems.map((item) => {
-                const isActive = item.slug === slug;
-                const href =
-                  item.slug === "overview" ? "/docs" : `/docs/${item.slug}`;
-
-                return (
-                  <a
-                    href={href}
-                    class:list={{
-                      "inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium transition-colors duration-150": true,
-                      "bg-white text-black hover:bg-white hover:text-black":
-                        isActive,
-                      "text-zinc-400 hover:bg-white/10 hover:text-white":
-                        !isActive,
-                    }}
-                  >
-                    {item.slug === "overview" ? (
-                      <span>{item.title}</span>
-                    ) : (
-                      <code class="text-sm font-semibold">{item.name}</code>
-                    )}
-                  </a>
-                );
-              })
-            }
-          </nav>
-        </aside>
-        <main class="flex-1 overflow-y-auto">
-          <div
-            class="mx-auto flex max-w-4xl flex-col gap-12 px-4 py-10 sm:px-10 sm:py-16"
-          >
-            <article class="prose prose-invert max-w-none docs-prose">
-              <slot />
-            </article>
-            <Footer />
-          </div>
-        </main>
+          Close
+        </button>
       </div>
+      <DocsSearchNav client:load items={navItems} activeSlug={slug} />
+    </aside>
+    <div class="flex flex-1 flex-col">
+      <header
+        class="top-0 z-20 flex items-center justify-between border-b border-white/10 bg-black/80 px-4 py-4 backdrop-blur-2xl md:hidden"
+      >
+        <button
+          type="button"
+          class="inline-flex items-center gap-2 rounded-xl border-2 border-white/10 px-3 py-2 text-sm font-medium text-white transition hover:border-white/30"
+          aria-controls="docs-nav"
+          aria-expanded="false"
+          data-docs-nav-trigger
+        >
+          <span class="sr-only">Open navigation</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5">
+            <path
+              fill="currentColor"
+              d="M4 7a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Zm0 5a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Zm1 4a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H5Z"
+            ></path>
+          </svg>
+          Menu
+        </button>
+        <p class="text-[0.65rem] uppercase tracking-[0.3em] text-zinc-500">
+          Mirrow docs
+        </p>
+      </header>
+      <main class="flex-1 overflow-y-auto">
+        <div
+          class="mx-auto flex w-full max-w-4xl flex-col gap-12 px-4 py-10 sm:px-10 sm:py-16"
+        >
+          <article class="prose prose-invert max-w-none docs-prose">
+            <slot />
+          </article>
+          <Footer />
+        </div>
+      </main>
+    </div>
+    <div
+      class="pointer-events-none fixed inset-0 z-30 bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-200 md:hidden"
+      data-docs-nav-overlay
+    >
     </div>
   </div>
 </BaseLayout>
@@ -105,3 +112,46 @@ const navItems = [
     content: none;
   }
 </style>
+
+<script is:inline>
+  const sidebar = document.getElementById("docs-nav");
+  const trigger = document.querySelector("[data-docs-nav-trigger]");
+  const closeButton = document.querySelector("[data-docs-nav-close]");
+  const overlay = document.querySelector("[data-docs-nav-overlay]");
+
+  if (sidebar && trigger && overlay) {
+    const navLinks = sidebar.querySelectorAll("[data-docs-nav-link]");
+
+    const setOpen = (open) => {
+      sidebar.dataset.open = open ? "true" : "false";
+      trigger.setAttribute("aria-expanded", open ? "true" : "false");
+
+      const method = open ? "add" : "remove";
+      sidebar.classList[method]("translate-x-0");
+      sidebar.classList[open ? "remove" : "add"]("-translate-x-full");
+
+      overlay.classList[method]("opacity-100");
+      overlay.classList[method]("pointer-events-auto");
+      overlay.classList[open ? "remove" : "add"]("opacity-0");
+      overlay.classList[open ? "remove" : "add"]("pointer-events-none");
+
+      if (open) {
+        sidebar.focus({ preventScroll: true });
+      }
+    };
+
+    trigger.addEventListener("click", () => setOpen(true));
+    closeButton?.addEventListener("click", () => setOpen(false));
+    overlay.addEventListener("click", () => setOpen(false));
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    });
+  }
+</script>

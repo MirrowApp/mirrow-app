@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Playground from "../components/Playground";
+---
+
+<Layout>
+  <div class="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 py-12 sm:px-6 lg:px-8">
+    <header class="space-y-3 text-center md:text-left">
+      <p class="text-xs uppercase tracking-[0.3em] text-zinc-500">Preview</p>
+      <h1 class="text-3xl font-semibold text-white sm:text-4xl">Mirrow Playground</h1>
+      <p class="text-sm text-zinc-400 sm:text-base">
+        Experiment with the Mirrow DSL. Your source compiles instantly into live SVG output.
+      </p>
+    </header>
+    <Playground client:load />
+  </div>
+</Layout>
