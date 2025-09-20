@@ -1,0 +1,37 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+import manifest from "../../data/docs-manifest.json";
+
+const elements = manifest.elements ?? [];
+const firstElement = elements[0];
+---
+
+<DocsLayout slug="overview">
+  <h1 class="text-4xl font-black">Mirrow element docs</h1>
+  <p>
+    This guide is generated directly from <code>ATTRIBUTES.md</code> so it always reflects the
+    current compiler surface. Pick an element from the navigation on the left to browse its
+    supported attributes.
+  </p>
+  <p>
+    Need to refresh the docs after editing attributes? Run <code>npm run generate:docs</code> and the
+    site will rebuild the element pages automatically.
+  </p>
+  {firstElement ? (
+    <section>
+      <h2>Jump in</h2>
+      <p>
+        Start with <a href={`/docs/${firstElement.slug}`}><code>&lt;{firstElement.name}&gt;</code></a> or jump
+        directly to any element from the index.
+      </p>
+    </section>
+  ) : (
+    <section>
+      <h2>No elements found</h2>
+      <p>
+        It looks like the generator has not produced any entries yet. Update <code>ATTRIBUTES.md</code> and
+        re-run <code>npm run generate:docs</code> to populate the docs.
+      </p>
+    </section>
+  )}
+</DocsLayout>

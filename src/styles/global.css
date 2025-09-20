@@ -5,3 +5,14 @@
   --font-serif: "Merriweather Variable", serif;
   --font-inter: "Inter Variable", sans-serif;
 }
+
+@layer base {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}

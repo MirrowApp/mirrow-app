@@ -1,0 +1,107 @@
+---
+import BaseLayout from "./Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import manifest from "../data/docs-manifest.json";
+
+const { slug = "" } = Astro.props;
+const navItems = [
+  { slug: "overview", title: "Overview", name: "Overview" },
+  ...(manifest.elements ?? []),
+];
+---
+
+<BaseLayout>
+  <div class="flex min-h-screen bg-black text-white">
+    <div class="flex w-full flex-col h-max">
+      <Header />
+      <div class="flex top-0">
+        <aside
+          class="min-h-0 max-h-full flex flex-col w-64 max-w-full border-r fixed top-0 border-zinc-700/60 px-6 py-8 md:w-72"
+        >
+          <div class="space-y-2">
+            <p class="text-[0.65rem] uppercase tracking-[0.3em] text-zinc-500">
+              Index
+            </p>
+            <h1 class="text-lg font-semibold text-zinc-100">Mirrow docs</h1>
+          </div>
+          <nav class="mt-6 flex-1 flex flex-col gap-1.5 overflow-y-auto">
+            {
+              navItems.map((item) => {
+                const isActive = item.slug === slug;
+                const href =
+                  item.slug === "overview" ? "/docs" : `/docs/${item.slug}`;
+
+                return (
+                  <a
+                    href={href}
+                    class:list={{
+                      "inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium transition-colors duration-150": true,
+                      "bg-white text-black hover:bg-white hover:text-black":
+                        isActive,
+                      "text-zinc-400 hover:bg-white/10 hover:text-white":
+                        !isActive,
+                    }}
+                  >
+                    {item.slug === "overview" ? (
+                      <span>{item.title}</span>
+                    ) : (
+                      <code class="text-sm font-semibold">{item.name}</code>
+                    )}
+                  </a>
+                );
+              })
+            }
+          </nav>
+        </aside>
+        <main class="flex-1 overflow-y-auto">
+          <div
+            class="mx-auto flex max-w-4xl flex-col gap-12 px-4 py-10 sm:px-10 sm:py-16"
+          >
+            <article class="prose prose-invert max-w-none docs-prose">
+              <slot />
+            </article>
+            <Footer />
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  :global(.docs-prose table) {
+    width: 100%;
+    border: 1px solid rgb(63 63 70 / 0.6);
+  }
+
+  :global(.docs-prose thead th) {
+    background-color: rgb(39 39 42 / 0.6);
+    padding: 0.75rem 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgb(161 161 170);
+  }
+
+  :global(.docs-prose td) {
+    vertical-align: top;
+    border-top: 1px solid rgb(63 63 70 / 0.6);
+    padding: 0.75rem 1rem;
+  }
+
+  :global(.docs-prose tbody tr:nth-child(even)) {
+    background-color: rgb(24 24 27 / 0.6);
+  }
+
+  :global(.docs-prose code::before),
+  :global(.docs-prose code::after) {
+    content: none;
+  }
+
+  :global(.docs-prose pre code::before),
+  :global(.docs-prose pre code::after) {
+    content: none;
+  }
+</style>

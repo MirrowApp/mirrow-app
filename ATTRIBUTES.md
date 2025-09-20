@@ -1,0 +1,1766 @@
+# Mirrow Element Attribute Reference
+Generated automatically by scripts/generate-attribute-doc.mjs on 2025-09-20T03:30:38.785Z.
+
+Each section enumerates the attributes accepted by a Mirrow element, the expected value type, whether the attribute is required, and any compiler expansions applied to the attribute.
+
+## <a>
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `download` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `href` — type string.
+- `hreflang` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `ping` — type string.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `referrerPolicy` — type string; maps to `referrerpolicy`.
+- `rel` — type string.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `target` — type string.
+- `transform` — type string.
+- `type` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <animate>
+- `accelerate` — type number.
+- `accumulate` — type string.
+- `additive` — type string.
+- `attributeName` — type string.
+- `attributeType` — type string.
+- `autoReverse` — type boolean; maps to `autoreverse`.
+- `begin` — type string.
+- `by` — type string.
+- `calcMode` — type string.
+- `class` — type string.
+- `decelerate` — type number.
+- `dur` — type string.
+- `end` — type string.
+- `fill` — type string.
+- `from` — type string.
+- `href` — type string.
+- `id` — type string.
+- `keySplines` — type string.
+- `keyTimes` — type string.
+- `lang` — type string.
+- `max` — type string.
+- `min` — type string.
+- `repeatCount` — type string.
+- `repeatDur` — type string.
+- `restart` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `to` — type string.
+- `values` — type string.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <animateMotion>
+- `accelerate` — type number.
+- `accumulate` — type string.
+- `additive` — type string.
+- `attributeName` — type string.
+- `attributeType` — type string.
+- `autoReverse` — type boolean; maps to `autoreverse`.
+- `begin` — type string.
+- `by` — type string.
+- `calcMode` — type string.
+- `class` — type string.
+- `decelerate` — type number.
+- `dur` — type string.
+- `end` — type string.
+- `fill` — type string.
+- `from` — type string.
+- `href` — type string.
+- `id` — type string.
+- `keyPoints` — type string.
+- `keySplines` — type string.
+- `keyTimes` — type string.
+- `lang` — type string.
+- `max` — type string.
+- `min` — type string.
+- `path` — type string.
+- `repeatCount` — type string.
+- `repeatDur` — type string.
+- `restart` — type string.
+- `rotate` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `to` — type string.
+- `values` — type string.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <animateTransform>
+- `accelerate` — type number.
+- `accumulate` — type string.
+- `additive` — type string.
+- `attributeName` — type string.
+- `attributeType` — type string.
+- `autoReverse` — type boolean; maps to `autoreverse`.
+- `begin` — type string.
+- `by` — type string.
+- `calcMode` — type string.
+- `class` — type string.
+- `decelerate` — type number.
+- `dur` — type string.
+- `end` — type string.
+- `fill` — type string.
+- `from` — type string.
+- `href` — type string.
+- `id` — type string.
+- `keySplines` — type string.
+- `keyTimes` — type string.
+- `lang` — type string.
+- `max` — type string.
+- `min` — type string.
+- `repeatCount` — type string.
+- `repeatDur` — type string.
+- `restart` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `to` — type string.
+- `type` — type string.
+- `values` — type string.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <circle>
+- `at` — type tuple[2] (number, number); maps to `cx`, `cy`.
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `filled` — type boolean.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pathLength` — type number.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `r` — type number; required.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <clipPath>
+- `class` — type string.
+- `clipPathUnits` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <defs>
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <desc>
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <discard>
+- `begin` — type string.
+- `class` — type string.
+- `href` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <ellipse>
+- `at` — type tuple[2] (number, number); maps to `cx`, `cy`.
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pathLength` — type number.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `radius` — type tuple[2] (number, number); required; maps to `rx`, `ry`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feBlend>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `id` — type string.
+- `in` — type string.
+- `in2` — type string.
+- `lang` — type string.
+- `mode` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feColorMatrix>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `id` — type string.
+- `in` — type string.
+- `lang` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `type` — type string.
+- `values` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feComponentTransfer>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `id` — type string.
+- `in` — type string.
+- `lang` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feComposite>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `id` — type string.
+- `in` — type string.
+- `in2` — type string.
+- `k1` — type number.
+- `k2` — type number.
+- `k3` — type number.
+- `k4` — type number.
+- `lang` — type string.
+- `operator` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feConvolveMatrix>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `bias` — type number.
+- `class` — type string.
+- `divisor` — type number.
+- `edgeMode` — type string.
+- `id` — type string.
+- `in` — type string.
+- `kernelMatrix` — type string.
+- `kernelUnitLength` — type string.
+- `lang` — type string.
+- `order` — type string.
+- `preserveAlpha` — type boolean.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `targetX` — type number.
+- `targetY` — type number.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feDiffuseLighting>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `diffuseConstant` — type number.
+- `id` — type string.
+- `in` — type string.
+- `kernelUnitLength` — type string.
+- `lang` — type string.
+- `lightingColor` — type string; maps to `lighting-color`.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `surfaceScale` — type number.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feDisplacementMap>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `id` — type string.
+- `in` — type string.
+- `in2` — type string.
+- `lang` — type string.
+- `result` — type string.
+- `scale` — type number.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xChannelSelector` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+- `yChannelSelector` — type string.
+
+## <feDistantLight>
+- `azimuth` — type number.
+- `class` — type string.
+- `elevation` — type number.
+- `id` — type string.
+- `lang` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feDropShadow>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `dx` — type number.
+- `dy` — type number.
+- `floodColor` — type string; maps to `flood-color`.
+- `floodOpacity` — type number; maps to `flood-opacity`.
+- `id` — type string.
+- `in` — type string.
+- `lang` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `stdDeviation` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feFlood>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `floodColor` — type string; maps to `flood-color`.
+- `floodOpacity` — type number; maps to `flood-opacity`.
+- `id` — type string.
+- `lang` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feFuncA>
+- `amplitude` — type number.
+- `class` — type string.
+- `exponent` — type number.
+- `id` — type string.
+- `intercept` — type number.
+- `lang` — type string.
+- `offset` — type number.
+- `slope` — type number.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `tableValues` — type string.
+- `type` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feFuncB>
+- `amplitude` — type number.
+- `class` — type string.
+- `exponent` — type number.
+- `id` — type string.
+- `intercept` — type number.
+- `lang` — type string.
+- `offset` — type number.
+- `slope` — type number.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `tableValues` — type string.
+- `type` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feFuncG>
+- `amplitude` — type number.
+- `class` — type string.
+- `exponent` — type number.
+- `id` — type string.
+- `intercept` — type number.
+- `lang` — type string.
+- `offset` — type number.
+- `slope` — type number.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `tableValues` — type string.
+- `type` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feFuncR>
+- `amplitude` — type number.
+- `class` — type string.
+- `exponent` — type number.
+- `id` — type string.
+- `intercept` — type number.
+- `lang` — type string.
+- `offset` — type number.
+- `slope` — type number.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `tableValues` — type string.
+- `type` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feGaussianBlur>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `edgeMode` — type string.
+- `id` — type string.
+- `in` — type string.
+- `lang` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `stdDeviation` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feImage>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `crossOrigin` — type string; maps to `crossorigin`.
+- `href` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `preserveAspectRatio` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feMerge>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feMergeNode>
+- `class` — type string.
+- `id` — type string.
+- `in` — type string.
+- `lang` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feMorphology>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `id` — type string.
+- `in` — type string.
+- `lang` — type string.
+- `operator` — type string.
+- `radius` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feOffset>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `dx` — type number.
+- `dy` — type number.
+- `id` — type string.
+- `in` — type string.
+- `lang` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <fePointLight>
+- `at` — type tuple[3] (number, number, number); maps to `x`, `y`, `z`.
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feSpecularLighting>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `id` — type string.
+- `in` — type string.
+- `kernelUnitLength` — type string.
+- `lang` — type string.
+- `lightingColor` — type string; maps to `lighting-color`.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `specularConstant` — type number.
+- `specularExponent` — type number.
+- `style` — type string.
+- `surfaceScale` — type number.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feSpotLight>
+- `at` — type tuple[3] (number, number, number); maps to `x`, `y`, `z`.
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `limitingConeAngle` — type number.
+- `pointsAt` — type tuple[3] (number, number, number); maps to `pointsAtX`, `pointsAtY`, `pointsAtZ`.
+- `specularExponent` — type number.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feTile>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `id` — type string.
+- `in` — type string.
+- `lang` — type string.
+- `result` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <feTurbulence>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `baseFrequency` — type string.
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `numOctaves` — type number.
+- `result` — type string.
+- `seed` — type number.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `stitchTiles` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `type` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <filter>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `filterRes` — type number.
+- `filterUnits` — type string.
+- `href` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `primitiveUnits` — type string.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <foreignObject>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <g>
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <image>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `crossOrigin` — type string; maps to `crossorigin`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `href` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `preserveAspectRatio` — type string.
+- `referrerPolicy` — type string; maps to `referrerpolicy`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <line>
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `from` — type tuple[2] (number, number); required; maps to `x1`, `y1`.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pathLength` — type number.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string; required.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `to` — type tuple[2] (number, number); required; maps to `x2`, `y2`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <linearGradient>
+- `class` — type string.
+- `from` — type tuple[2] (number, number); maps to `x1`, `y1`.
+- `gradientTransform` — type string.
+- `gradientUnits` — type string.
+- `href` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `spreadMethod` — type string.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `to` — type tuple[2] (number, number); maps to `x2`, `y2`.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <marker>
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerHeight` — type number.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `markerUnits` — type string.
+- `markerWidth` — type number.
+- `mask` — type string.
+- `opacity` — type number.
+- `orient` — type string.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `preserveAspectRatio` — type string.
+- `refX` — type number.
+- `refY` — type number.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `viewBox` — type string.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <mask>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `maskContentUnits` — type string.
+- `maskType` — type string; maps to `mask-type`.
+- `maskUnits` — type string.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <metadata>
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <mpath>
+- `class` — type string.
+- `href` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <path>
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `d` — type string.
+- `data` — type string; required; maps to `d`.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pathLength` — type number.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <pattern>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `href` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `patternContentUnits` — type string.
+- `patternTransform` — type string.
+- `patternUnits` — type string.
+- `preserveAspectRatio` — type string.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `viewBox` — type string.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <polygon>
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pathLength` — type number.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `points` — type string; required.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <polyline>
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pathLength` — type number.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `points` — type string; required.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string; required.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <radialGradient>
+- `at` — type tuple[2] (number, number); maps to `cx`, `cy`.
+- `class` — type string.
+- `focus` — type tuple[2] (number, number); maps to `fx`, `fy`.
+- `fr` — type number.
+- `gradientTransform` — type string.
+- `gradientUnits` — type string.
+- `href` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `r` — type number.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `spreadMethod` — type string.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <rect>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pathLength` — type number.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `radius` — type tuple[2] (number, number); maps to `rx`, `ry`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `size` — type tuple[2] (number, number); required; maps to `width`, `height`.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <script>
+- `class` — type string.
+- `crossOrigin` — type string; maps to `crossorigin`.
+- `href` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `referrerPolicy` — type string; maps to `referrerpolicy`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `type` — type string.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <set>
+- `attributeName` — type string.
+- `attributeType` — type string.
+- `begin` — type string.
+- `class` — type string.
+- `dur` — type string.
+- `end` — type string.
+- `fill` — type string.
+- `href` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `max` — type string.
+- `min` — type string.
+- `repeatCount` — type string.
+- `repeatDur` — type string.
+- `restart` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `to` — type string.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <stop>
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `offset` — type number; required.
+- `stopColor` — type string; maps to `stop-color`.
+- `stopOpacity` — type number; maps to `stop-opacity`.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <style>
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `media` — type string.
+- `nonce` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `title` — type string.
+- `type` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <svg>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `baseProfile` — type string.
+- `box` — type tuple[4] (number, number, number, number); maps to `viewBox`.
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `contentScriptType` — type string.
+- `contentStyleType` — type string.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `preserve` — type tuple[2] (identifier, identifier); maps to `preserveAspectRatio`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `version` — type string.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlns` — type string.
+- `xmlnsXlink` — type string; maps to `xmlns:xlink`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <switch>
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <symbol>
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `preserveAspectRatio` — type string.
+- `ref` — type tuple[2] (number, number); maps to `refX`, `refY`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `viewBox` — type string.
+- `visibility` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <text>
+- `alignmentBaseline` — type string; maps to `alignment-baseline`.
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `baselineShift` — type string; maps to `baseline-shift`.
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `direction` — type string.
+- `display` — type string.
+- `dominantBaseline` — type string; maps to `dominant-baseline`.
+- `dx` — type number.
+- `dy` — type number.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `fontFamily` — type string; maps to `font-family`.
+- `fontFeatureSettings` — type string; maps to `font-feature-settings`.
+- `fontSize` — type number; maps to `font-size`.
+- `fontSizeAdjust` — type number; maps to `font-size-adjust`.
+- `fontStretch` — type string; maps to `font-stretch`.
+- `fontStyle` — type string; maps to `font-style`.
+- `fontVariant` — type string; maps to `font-variant`.
+- `fontVariationSettings` — type string; maps to `font-variation-settings`.
+- `fontWeight` — type string; maps to `font-weight`.
+- `glyphOrientationHorizontal` — type string; maps to `glyph-orientation-horizontal`.
+- `glyphOrientationVertical` — type string; maps to `glyph-orientation-vertical`.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `kerning` — type string.
+- `lang` — type string.
+- `lengthAdjust` — type string.
+- `letterSpacing` — type string; maps to `letter-spacing`.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `rotate` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `textAnchor` — type string; maps to `text-anchor`.
+- `textLength` — type number.
+- `textRendering` — type string; maps to `text-rendering`.
+- `transform` — type string.
+- `unicodeBidi` — type string; maps to `unicode-bidi`.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `wordSpacing` — type string; maps to `word-spacing`.
+- `writingMode` — type string; maps to `writing-mode`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <textPath>
+- `alignmentBaseline` — type string; maps to `alignment-baseline`.
+- `baselineShift` — type string; maps to `baseline-shift`.
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `direction` — type string.
+- `display` — type string.
+- `dominantBaseline` — type string; maps to `dominant-baseline`.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `fontFamily` — type string; maps to `font-family`.
+- `fontFeatureSettings` — type string; maps to `font-feature-settings`.
+- `fontSize` — type number; maps to `font-size`.
+- `fontSizeAdjust` — type number; maps to `font-size-adjust`.
+- `fontStretch` — type string; maps to `font-stretch`.
+- `fontStyle` — type string; maps to `font-style`.
+- `fontVariant` — type string; maps to `font-variant`.
+- `fontVariationSettings` — type string; maps to `font-variation-settings`.
+- `fontWeight` — type string; maps to `font-weight`.
+- `glyphOrientationHorizontal` — type string; maps to `glyph-orientation-horizontal`.
+- `glyphOrientationVertical` — type string; maps to `glyph-orientation-vertical`.
+- `href` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `kerning` — type string.
+- `lang` — type string.
+- `letterSpacing` — type string; maps to `letter-spacing`.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `method` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `side` — type string.
+- `spacing` — type string.
+- `startOffset` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `textAnchor` — type string; maps to `text-anchor`.
+- `textRendering` — type string; maps to `text-rendering`.
+- `transform` — type string.
+- `unicodeBidi` — type string; maps to `unicode-bidi`.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `wordSpacing` — type string; maps to `word-spacing`.
+- `writingMode` — type string; maps to `writing-mode`.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <title>
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <tspan>
+- `alignmentBaseline` — type string; maps to `alignment-baseline`.
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `baselineShift` — type string; maps to `baseline-shift`.
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `direction` — type string.
+- `display` — type string.
+- `dominantBaseline` — type string; maps to `dominant-baseline`.
+- `dx` — type number.
+- `dy` — type number.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `fontFamily` — type string; maps to `font-family`.
+- `fontFeatureSettings` — type string; maps to `font-feature-settings`.
+- `fontSize` — type number; maps to `font-size`.
+- `fontSizeAdjust` — type number; maps to `font-size-adjust`.
+- `fontStretch` — type string; maps to `font-stretch`.
+- `fontStyle` — type string; maps to `font-style`.
+- `fontVariant` — type string; maps to `font-variant`.
+- `fontVariationSettings` — type string; maps to `font-variation-settings`.
+- `fontWeight` — type string; maps to `font-weight`.
+- `glyphOrientationHorizontal` — type string; maps to `glyph-orientation-horizontal`.
+- `glyphOrientationVertical` — type string; maps to `glyph-orientation-vertical`.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `kerning` — type string.
+- `lang` — type string.
+- `lengthAdjust` — type string.
+- `letterSpacing` — type string; maps to `letter-spacing`.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `rotate` — type string.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `textAnchor` — type string; maps to `text-anchor`.
+- `textLength` — type number.
+- `textRendering` — type string; maps to `text-rendering`.
+- `transform` — type string.
+- `unicodeBidi` — type string; maps to `unicode-bidi`.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `wordSpacing` — type string; maps to `word-spacing`.
+- `writingMode` — type string; maps to `writing-mode`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <use>
+- `at` — type tuple[2] (number, number); maps to `x`, `y`.
+- `class` — type string.
+- `clipPath` — type string; maps to `clip-path`.
+- `clipRule` — type string; maps to `clip-rule`.
+- `color` — type string.
+- `colorInterpolation` — type string; maps to `color-interpolation`.
+- `colorInterpolationFilters` — type string; maps to `color-interpolation-filters`.
+- `colorRendering` — type string; maps to `color-rendering`.
+- `cursor` — type string.
+- `display` — type string.
+- `fill` — type string.
+- `fillOpacity` — type number; maps to `fill-opacity`.
+- `fillRule` — type string; maps to `fill-rule`.
+- `filter` — type string.
+- `href` — type string.
+- `id` — type string.
+- `imageRendering` — type string; maps to `image-rendering`.
+- `lang` — type string.
+- `markerEnd` — type string; maps to `marker-end`.
+- `markerMid` — type string; maps to `marker-mid`.
+- `markerStart` — type string; maps to `marker-start`.
+- `mask` — type string.
+- `opacity` — type number.
+- `paintOrder` — type string; maps to `paint-order`.
+- `pointerEvents` — type string; maps to `pointer-events`.
+- `requiredExtensions` — type string.
+- `requiredFeatures` — type string.
+- `size` — type tuple[2] (number, number); maps to `width`, `height`.
+- `stroke` — type string.
+- `strokeDasharray` — type string; maps to `stroke-dasharray`.
+- `strokeDashoffset` — type number; maps to `stroke-dashoffset`.
+- `strokeLinecap` — type string; maps to `stroke-linecap`.
+- `strokeLinejoin` — type string; maps to `stroke-linejoin`.
+- `strokeMiterlimit` — type number; maps to `stroke-miterlimit`.
+- `strokeOpacity` — type number; maps to `stroke-opacity`.
+- `strokeWidth` — type number; maps to `stroke-width`.
+- `style` — type string.
+- `systemLanguage` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `transform` — type string.
+- `vectorEffect` — type string; maps to `vector-effect`.
+- `visibility` — type string.
+- `xlinkHref` — type string; maps to `xlink:href`.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+
+## <view>
+- `class` — type string.
+- `id` — type string.
+- `lang` — type string.
+- `preserveAspectRatio` — type string.
+- `style` — type string.
+- `tabIndex` — type number; maps to `tabindex`.
+- `viewBox` — type string.
+- `viewTarget` — type string.
+- `xmlBase` — type string; maps to `xml:base`.
+- `xmlLang` — type string; maps to `xml:lang`.
+- `xmlSpace` — type string; maps to `xml:space`.
+- `zoomAndPan` — type string.

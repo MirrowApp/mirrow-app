@@ -1,0 +1,389 @@
+{
+  "generatedAt": "2025-09-20T04:18:53.701Z",
+  "elements": [
+    {
+      "name": "a",
+      "slug": "a",
+      "title": "<a>",
+      "order": 1
+    },
+    {
+      "name": "animate",
+      "slug": "animate",
+      "title": "<animate>",
+      "order": 2
+    },
+    {
+      "name": "animateMotion",
+      "slug": "animate-motion",
+      "title": "<animateMotion>",
+      "order": 3
+    },
+    {
+      "name": "animateTransform",
+      "slug": "animate-transform",
+      "title": "<animateTransform>",
+      "order": 4
+    },
+    {
+      "name": "circle",
+      "slug": "circle",
+      "title": "<circle>",
+      "order": 5
+    },
+    {
+      "name": "clipPath",
+      "slug": "clip-path",
+      "title": "<clipPath>",
+      "order": 6
+    },
+    {
+      "name": "defs",
+      "slug": "defs",
+      "title": "<defs>",
+      "order": 7
+    },
+    {
+      "name": "desc",
+      "slug": "desc",
+      "title": "<desc>",
+      "order": 8
+    },
+    {
+      "name": "discard",
+      "slug": "discard",
+      "title": "<discard>",
+      "order": 9
+    },
+    {
+      "name": "ellipse",
+      "slug": "ellipse",
+      "title": "<ellipse>",
+      "order": 10
+    },
+    {
+      "name": "feBlend",
+      "slug": "fe-blend",
+      "title": "<feBlend>",
+      "order": 11
+    },
+    {
+      "name": "feColorMatrix",
+      "slug": "fe-color-matrix",
+      "title": "<feColorMatrix>",
+      "order": 12
+    },
+    {
+      "name": "feComponentTransfer",
+      "slug": "fe-component-transfer",
+      "title": "<feComponentTransfer>",
+      "order": 13
+    },
+    {
+      "name": "feComposite",
+      "slug": "fe-composite",
+      "title": "<feComposite>",
+      "order": 14
+    },
+    {
+      "name": "feConvolveMatrix",
+      "slug": "fe-convolve-matrix",
+      "title": "<feConvolveMatrix>",
+      "order": 15
+    },
+    {
+      "name": "feDiffuseLighting",
+      "slug": "fe-diffuse-lighting",
+      "title": "<feDiffuseLighting>",
+      "order": 16
+    },
+    {
+      "name": "feDisplacementMap",
+      "slug": "fe-displacement-map",
+      "title": "<feDisplacementMap>",
+      "order": 17
+    },
+    {
+      "name": "feDistantLight",
+      "slug": "fe-distant-light",
+      "title": "<feDistantLight>",
+      "order": 18
+    },
+    {
+      "name": "feDropShadow",
+      "slug": "fe-drop-shadow",
+      "title": "<feDropShadow>",
+      "order": 19
+    },
+    {
+      "name": "feFlood",
+      "slug": "fe-flood",
+      "title": "<feFlood>",
+      "order": 20
+    },
+    {
+      "name": "feFuncA",
+      "slug": "fe-func-a",
+      "title": "<feFuncA>",
+      "order": 21
+    },
+    {
+      "name": "feFuncB",
+      "slug": "fe-func-b",
+      "title": "<feFuncB>",
+      "order": 22
+    },
+    {
+      "name": "feFuncG",
+      "slug": "fe-func-g",
+      "title": "<feFuncG>",
+      "order": 23
+    },
+    {
+      "name": "feFuncR",
+      "slug": "fe-func-r",
+      "title": "<feFuncR>",
+      "order": 24
+    },
+    {
+      "name": "feGaussianBlur",
+      "slug": "fe-gaussian-blur",
+      "title": "<feGaussianBlur>",
+      "order": 25
+    },
+    {
+      "name": "feImage",
+      "slug": "fe-image",
+      "title": "<feImage>",
+      "order": 26
+    },
+    {
+      "name": "feMerge",
+      "slug": "fe-merge",
+      "title": "<feMerge>",
+      "order": 27
+    },
+    {
+      "name": "feMergeNode",
+      "slug": "fe-merge-node",
+      "title": "<feMergeNode>",
+      "order": 28
+    },
+    {
+      "name": "feMorphology",
+      "slug": "fe-morphology",
+      "title": "<feMorphology>",
+      "order": 29
+    },
+    {
+      "name": "feOffset",
+      "slug": "fe-offset",
+      "title": "<feOffset>",
+      "order": 30
+    },
+    {
+      "name": "fePointLight",
+      "slug": "fe-point-light",
+      "title": "<fePointLight>",
+      "order": 31
+    },
+    {
+      "name": "feSpecularLighting",
+      "slug": "fe-specular-lighting",
+      "title": "<feSpecularLighting>",
+      "order": 32
+    },
+    {
+      "name": "feSpotLight",
+      "slug": "fe-spot-light",
+      "title": "<feSpotLight>",
+      "order": 33
+    },
+    {
+      "name": "feTile",
+      "slug": "fe-tile",
+      "title": "<feTile>",
+      "order": 34
+    },
+    {
+      "name": "feTurbulence",
+      "slug": "fe-turbulence",
+      "title": "<feTurbulence>",
+      "order": 35
+    },
+    {
+      "name": "filter",
+      "slug": "filter",
+      "title": "<filter>",
+      "order": 36
+    },
+    {
+      "name": "foreignObject",
+      "slug": "foreign-object",
+      "title": "<foreignObject>",
+      "order": 37
+    },
+    {
+      "name": "g",
+      "slug": "g",
+      "title": "<g>",
+      "order": 38
+    },
+    {
+      "name": "image",
+      "slug": "image",
+      "title": "<image>",
+      "order": 39
+    },
+    {
+      "name": "line",
+      "slug": "line",
+      "title": "<line>",
+      "order": 40
+    },
+    {
+      "name": "linearGradient",
+      "slug": "linear-gradient",
+      "title": "<linearGradient>",
+      "order": 41
+    },
+    {
+      "name": "marker",
+      "slug": "marker",
+      "title": "<marker>",
+      "order": 42
+    },
+    {
+      "name": "mask",
+      "slug": "mask",
+      "title": "<mask>",
+      "order": 43
+    },
+    {
+      "name": "metadata",
+      "slug": "metadata",
+      "title": "<metadata>",
+      "order": 44
+    },
+    {
+      "name": "mpath",
+      "slug": "mpath",
+      "title": "<mpath>",
+      "order": 45
+    },
+    {
+      "name": "path",
+      "slug": "path",
+      "title": "<path>",
+      "order": 46
+    },
+    {
+      "name": "pattern",
+      "slug": "pattern",
+      "title": "<pattern>",
+      "order": 47
+    },
+    {
+      "name": "polygon",
+      "slug": "polygon",
+      "title": "<polygon>",
+      "order": 48
+    },
+    {
+      "name": "polyline",
+      "slug": "polyline",
+      "title": "<polyline>",
+      "order": 49
+    },
+    {
+      "name": "radialGradient",
+      "slug": "radial-gradient",
+      "title": "<radialGradient>",
+      "order": 50
+    },
+    {
+      "name": "rect",
+      "slug": "rect",
+      "title": "<rect>",
+      "order": 51
+    },
+    {
+      "name": "script",
+      "slug": "script",
+      "title": "<script>",
+      "order": 52
+    },
+    {
+      "name": "set",
+      "slug": "set",
+      "title": "<set>",
+      "order": 53
+    },
+    {
+      "name": "stop",
+      "slug": "stop",
+      "title": "<stop>",
+      "order": 54
+    },
+    {
+      "name": "style",
+      "slug": "style",
+      "title": "<style>",
+      "order": 55
+    },
+    {
+      "name": "svg",
+      "slug": "svg",
+      "title": "<svg>",
+      "order": 56
+    },
+    {
+      "name": "switch",
+      "slug": "switch",
+      "title": "<switch>",
+      "order": 57
+    },
+    {
+      "name": "symbol",
+      "slug": "symbol",
+      "title": "<symbol>",
+      "order": 58
+    },
+    {
+      "name": "text",
+      "slug": "text",
+      "title": "<text>",
+      "order": 59
+    },
+    {
+      "name": "textPath",
+      "slug": "text-path",
+      "title": "<textPath>",
+      "order": 60
+    },
+    {
+      "name": "title",
+      "slug": "title",
+      "title": "<title>",
+      "order": 61
+    },
+    {
+      "name": "tspan",
+      "slug": "tspan",
+      "title": "<tspan>",
+      "order": 62
+    },
+    {
+      "name": "use",
+      "slug": "use",
+      "title": "<use>",
+      "order": 63
+    },
+    {
+      "name": "view",
+      "slug": "view",
+      "title": "<view>",
+      "order": 64
+    }
+  ]
+}
