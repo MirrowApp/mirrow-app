@@ -24,11 +24,19 @@ import Hashtag from "../components/svgs/Hashtag.astro";
         >
           SVGs. One file. Zero fuss. 🪐
         </h1>
-        <button
-          class="px-8 py-4 text-xl font-bold w-fit mx-auto my-8 hover:-translate-y-1 transition-all duration-300 bg-white rounded-2xl text-black"
-        >
-          Coming soon
-        </button>
+        <div class="space-x-8 flex mx-auto h-fit">
+          <a
+            href="/playground"
+            class="px-8 py-4 text-xl font-bold my-8 hover:-translate-y-1 transition-all duration-300 bg-white shadow-2xl rounded-2xl text-black"
+          >
+            Try now
+          </a>
+          <a
+            href="/docs"
+            class="px-8 py-4 border my-auto border-white rounded-2xl hover:-translate-y-1 transition-all duration-300"
+            >Read Docs</a
+          >
+        </div>
       </div>
       <Codeblock />
       <div class="my-14">

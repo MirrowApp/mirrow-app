@@ -1,15 +1,27 @@
-import { useMemo, useState, type ChangeEvent } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ChangeEvent,
+} from "react";
 
 type NavItem = {
   name: string;
   slug: string;
   title?: string;
+  href?: string;
 };
 
 type DocsSearchNavProps = {
   items: NavItem[];
   activeSlug: string;
 };
+
+const staticNavItems: NavItem[] = [
+  { name: "Getting started", slug: "overview", href: "/docs" },
+  { name: "Installation", slug: "installation", href: "/docs/installation" },
+];
 
 const baseLinkClasses =
   "inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium transition-colors duration-150";
@@ -18,6 +30,8 @@ const inactiveLinkClasses = "text-zinc-400 hover:bg-white/10 hover:text-white";
 
 const DocsSearchNav = ({ items, activeSlug }: DocsSearchNavProps) => {
   const [query, setQuery] = useState("");
+  const [isNavReady, setNavReady] = useState(false);
+  const navRef = useRef<HTMLDivElement | null>(null);
 
   const normalizedQuery = query.trim().toLowerCase();
 
@@ -36,6 +50,91 @@ const DocsSearchNav = ({ items, activeSlug }: DocsSearchNavProps) => {
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
+  };
+
+  useEffect(() => {
+    const node = navRef.current;
+    if (!node) {
+      setNavReady(true);
+      return;
+    }
+
+    const storageKey = "docs-nav-scroll";
+    let canUseStorage = true;
+    let didScheduleReveal = false;
+
+    const frameIds: number[] = [];
+    let hasRevealed = false;
+
+    const reveal = () => {
+      if (!hasRevealed) {
+        hasRevealed = true;
+        setNavReady(true);
+      }
+    };
+
+    try {
+      const savedValue = sessionStorage.getItem(storageKey);
+      if (savedValue) {
+        const parsed = Number(savedValue);
+        if (Number.isFinite(parsed)) {
+          const frameId = requestAnimationFrame(() => {
+            if (navRef.current) {
+              navRef.current.scrollTop = parsed;
+            }
+            reveal();
+          });
+          frameIds.push(frameId);
+          didScheduleReveal = true;
+        }
+      }
+    } catch (error) {
+      canUseStorage = false;
+    }
+
+    if (!didScheduleReveal) {
+      const frameId = requestAnimationFrame(reveal);
+      frameIds.push(frameId);
+    }
+
+    const handleScroll = () => {
+      if (!canUseStorage) {
+        return;
+      }
+
+      try {
+        sessionStorage.setItem(storageKey, String(node.scrollTop));
+      } catch (error) {
+        canUseStorage = false;
+      }
+    };
+
+    node.addEventListener("scroll", handleScroll);
+
+    return () => {
+      node.removeEventListener("scroll", handleScroll);
+      frameIds.forEach((id) => cancelAnimationFrame(id));
+    };
+  }, []);
+
+  const renderNavLink = (item: NavItem) => {
+    const isActive = item.slug === activeSlug;
+    const href = item.href ?? `/docs/${item.slug}`;
+    const linkClasses = `${baseLinkClasses} ${
+      isActive ? activeLinkClasses : inactiveLinkClasses
+    }`;
+
+    return (
+      <a
+        key={item.slug}
+        href={href}
+        className={linkClasses}
+        data-docs-nav-link
+        aria-current={isActive ? "page" : undefined}
+      >
+        <code className="text-sm font-semibold">{item.name}</code>
+      </a>
+    );
   };
 
   return (
@@ -66,27 +165,24 @@ const DocsSearchNav = ({ items, activeSlug }: DocsSearchNavProps) => {
         </div>
       </label>
       <nav
-        className="mt-5 flex-1 flex flex-col gap-1.5 overflow-y-auto"
+        className={`mt-5 flex-1 flex flex-col gap-1.5 overflow-y-auto transition-opacity duration-200 ${
+          isNavReady ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
         aria-live="polite"
+        ref={navRef}
       >
-        {filteredItems.map((item) => {
-          const isActive = item.slug === activeSlug;
-          const href = `/docs/${item.slug}`;
-          const linkClasses = `${baseLinkClasses} ${
-            isActive ? activeLinkClasses : inactiveLinkClasses
-          }`;
+        {staticNavItems.map(renderNavLink)}
 
-          return (
-            <a
-              key={item.slug}
-              href={href}
-              className={linkClasses}
-              data-docs-nav-link
-            >
-              <code className="text-sm font-semibold">{item.name}</code>
-            </a>
-          );
-        })}
+        <div
+          className="mt-4 flex items-center gap-3 px-3 text-[0.65rem] uppercase tracking-[0.3em] text-zinc-500/80"
+          role="separator"
+        >
+          <span aria-hidden="true" className="h-px flex-1 bg-white/10" />
+          <span aria-hidden="true">Elements</span>
+          <span aria-hidden="true" className="h-px flex-1 bg-white/10" />
+        </div>
+
+        {filteredItems.map(renderNavLink)}
 
         {filteredItems.length === 0 ? (
           <p className="rounded-xl bg-white/5 px-3 py-2 text-sm text-zinc-400">

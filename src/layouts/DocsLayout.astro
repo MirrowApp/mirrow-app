@@ -4,8 +4,25 @@ import Footer from "../components/Footer.astro";
 import DocsSearchNav from "../components/DocsSearchNav.tsx";
 import manifest from "../data/docs-manifest.json";
 
-const { slug = "" } = Astro.props;
+const { slug: providedSlug = "", elementName = "" } = Astro.props;
 const navItems = manifest.elements ?? [];
+
+const derivedSlug =
+  providedSlug ||
+  (elementName
+    ? (navItems.find((item) => item.name === elementName)?.slug ?? "")
+    : "");
+
+const normalizedPath = Astro.url.pathname.replace(/\/$/, "");
+const pathBasedSlug = normalizedPath
+  ? normalizedPath === "/docs"
+    ? "overview"
+    : normalizedPath.startsWith("/docs/")
+      ? normalizedPath.slice("/docs/".length)
+      : ""
+  : "";
+
+const activeSlug = derivedSlug || pathBasedSlug;
 ---
 
 <BaseLayout>
@@ -31,7 +48,7 @@ const navItems = manifest.elements ?? [];
           Close
         </button>
       </div>
-      <DocsSearchNav client:load items={navItems} activeSlug={slug} />
+      <DocsSearchNav client:load items={navItems} activeSlug={activeSlug} />
     </aside>
     <div class="flex flex-1 flex-col">
       <header
@@ -111,6 +128,47 @@ const navItems = manifest.elements ?? [];
   :global(.docs-prose pre code::after) {
     content: none;
   }
+
+  :global(.docs-prose pre) {
+    position: relative;
+    padding-top: 2.5rem;
+    border: 1px solid rgb(63 63 70 / 0.6);
+    border-radius: 10px;
+  }
+
+  :global(.docs-prose pre button[data-copy-code]) {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border-radius: 9999px;
+    border: 1px solid rgb(244 244 245 / 0.12);
+    background-color: rgb(24 24 27 / 0.85);
+    color: rgb(244 244 245);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+    transition:
+      border-color 150ms ease,
+      background-color 150ms ease,
+      color 150ms ease;
+  }
+
+  :global(.docs-prose pre button[data-copy-code]:hover),
+  :global(.docs-prose pre button[data-copy-code]:focus-visible) {
+    border-color: rgb(244 244 245 / 0.35);
+    background-color: rgb(39 39 42 / 0.9);
+    outline: none;
+  }
+
+  :global(.docs-prose pre button[data-copy-code][data-copied="true"]) {
+    border-color: rgb(74 222 128 / 0.55);
+    color: rgb(74 222 128);
+  }
 </style>
 
 <script is:inline>
@@ -154,4 +212,65 @@ const navItems = manifest.elements ?? [];
       }
     });
   }
+
+  const attachCopyButtons = () => {
+    const docsContainer = document.querySelector(".docs-prose");
+    if (!docsContainer) {
+      return;
+    }
+
+    docsContainer.querySelectorAll("pre").forEach((pre) => {
+      if (pre.querySelector("button[data-copy-code]")) {
+        return;
+      }
+
+      const code = pre.querySelector("code");
+      if (!code) {
+        return;
+      }
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.dataset.copyCode = "true";
+      button.textContent = "Copy";
+
+      const reset = () => {
+        delete button.dataset.copied;
+        button.textContent = "Copy";
+      };
+
+      button.addEventListener("click", async () => {
+        const value = code.innerText;
+
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(value);
+          } else {
+            const textarea = document.createElement("textarea");
+            textarea.style.position = "fixed";
+            textarea.style.opacity = "0";
+            textarea.value = value;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            textarea.remove();
+          }
+
+          button.dataset.copied = "true";
+          button.textContent = "Copied!";
+          setTimeout(reset, 2000);
+        } catch (error) {
+          console.error("Failed to copy code", error);
+          delete button.dataset.copied;
+          button.textContent = "Error";
+          setTimeout(reset, 2000);
+        }
+      });
+
+      pre.appendChild(button);
+    });
+  };
+
+  attachCopyButtons();
+  document.addEventListener("astro:page-load", attachCopyButtons);
 </script>

@@ -59,6 +59,21 @@ const ensureInlineStyles = () => {
     .mirrow-logo-appear {
       animation: mirrow-logo-poppin 1.5s ease-out forwards;
     }
+
+    @keyframes mobile-menu-slide-in {
+      from {
+        transform: translateY(-8rem);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .mobile-menu-panel {
+      animation: mobile-menu-slide-in 0.3s ease-out;
+    }
   `;
 
   document.head.appendChild(style);
@@ -103,8 +118,18 @@ const GithubIcon = () => (
   </svg>
 );
 
+const navItems = [
+  { href: "/docs", label: "Docs" },
+  {
+    href: "/playground",
+    label: "Playground",
+    badge: { text: "NEW", className: "bg-pink-600 text-black" },
+  },
+];
+
 const Header = () => {
   const [isAtTop, setIsAtTop] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     ensureInlineStyles();
@@ -122,42 +147,183 @@ const Header = () => {
   }, []);
 
   const containerClasses = [
-    "border-[#383838] z-40 fixed top-4 left-0 md:block hidden right-0 mx-auto my-8 flex w-full max-w-3xl justify-between rounded-full border p-3 backdrop-blur-sm transition-all ease-in-out",
+    "border-[#383838] z-40 md:fixed top-4 left-0 right-0 mx-auto my-8 flex w-full max-w-3xl justify-between rounded-full border p-3 backdrop-blur-sm transition-all ease-in-out",
     "transform-gpu",
     isAtTop
       ? "translate-y-0 opacity-100 duration-200"
       : "-translate-y-12 opacity-0 duration-300 pointer-events-none",
   ].join(" ");
 
-  return (
-    <div className={containerClasses}>
-      <div className="flex w-full gap-4">
-        <a href="/" className="flex gap-4">
-          <span className="my-auto h-6 w-11">
-            <MirrowLogo />
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    if (typeof document === "undefined") {
+      return;
+    }
+
+    const { body } = document;
+    const previousOverflow = body.style.overflow;
+    body.style.overflow = "hidden";
+
+    return () => {
+      body.style.overflow = previousOverflow;
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const handleChange = () => {
+      if (mediaQuery.matches) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, [isMenuOpen]);
+
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  const renderNavLinks = (onSelect?: () => void) =>
+    navItems.map((item) => (
+      <a
+        key={item.href}
+        href={item.href}
+        className="flex items-center gap-2 text-sm font-medium text-zinc-200 transition-colors hover:text-white focus-visible:outline-offset-2 focus-visible:outline-white"
+        onClick={onSelect}
+      >
+        <span>{item.label}</span>
+        {item.badge ? (
+          <span
+            className={`rounded-full px-2 py-0.5 text-xs font-semibold ${item.badge.className}`}
+          >
+            {item.badge.text}
           </span>
-          <p className="chrome-text-animation chroma-text my-auto font-inter text-2xl font-black">
-            mirrow
-          </p>
-        </a>
-        <div className="my-auto flex gap-8 px-6 font-medium">
-          <a href="/docs">Docs</a>
-          <a href="/playground" className="flex items-center gap-2">
-            <p>Playground</p>
-            <div className="rounded-full bg-pink-600 px-2 py-0.5 text-sm text-black">
-              NEW
-            </div>
+        ) : null}
+      </a>
+    ));
+
+  return (
+    <div className="px-4 md:px-0">
+      <div className={containerClasses}>
+        <div className="flex w-full items-center gap-4">
+          <a href="/" className="flex gap-4">
+            <span className="my-auto h-6 w-11">
+              <MirrowLogo />
+            </span>
+            <p className="chrome-text-animation chroma-text my-auto font-inter text-2xl font-black">
+              mirrow
+            </p>
           </a>
+
+          <nav className="ml-6 hidden items-center gap-8 text-sm text-zinc-200 md:flex">
+            {renderNavLinks()}
+          </nav>
+
+          <div className="ml-auto flex items-center gap-2">
+            <a
+              href="https://github.com/MirrowApp"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden size-10 items-center justify-center rounded-full border border-white/10 fill-[#aaa] transition-all duration-300 hover:-translate-y-0.5 hover:fill-white md:flex"
+              aria-label="Mirrow on GitHub"
+            >
+              <GithubIcon />
+            </a>
+            <button
+              type="button"
+              className="inline-flex size-9 items-center justify-center rounded-full border border-[#383838] text-white transition hover:border-white/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
+              aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
+              aria-expanded={isMenuOpen ? "true" : "false"}
+              onClick={toggleMenu}
+            >
+              {isMenuOpen ? (
+                <span className="sr-only">Close</span>
+              ) : (
+                <span className="sr-only">Menu</span>
+              )}
+              <div aria-hidden="true" className="pointer-events-none">
+                {isMenuOpen ? (
+                  <svg viewBox="0 0 24 24" className="h-5 w-5">
+                    <path
+                      fill="currentColor"
+                      d="M18.3 5.7a1 1 0 0 0-1.4 0L12 10.59L7.1 5.7A1 1 0 0 0 5.7 7.1L10.59 12L5.7 16.9a1 1 0 1 0 1.4 1.4L12 13.41l4.9 4.89a1 1 0 0 0 1.4-1.4L13.41 12l4.89-4.9a1 1 0 0 0 0-1.4Z"
+                    />
+                  </svg>
+                ) : (
+                  <svg viewBox="0 0 24 24" className="h-5 w-5">
+                    <path
+                      fill="currentColor"
+                      d="M4 7a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5A1 1 0 0 1 4 7Zm0 5a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Zm1 4a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H5Z"
+                    />
+                  </svg>
+                )}
+              </div>
+            </button>
+          </div>
         </div>
-        <a
-          href="https://github.com/MirrowApp"
-          target="_blank"
-          rel="noreferrer"
-          className="ml-auto my-auto size-10 fill-[#aaa] transition-all duration-300 hover:-translate-y-0.5 hover:fill-white"
-        >
-          <GithubIcon />
-        </a>
       </div>
+
+      {isMenuOpen ? (
+        <div className="fixed inset-0 z-50 flex flex-col md:hidden">
+          <button
+            type="button"
+            className="absolute inset-0 bg-transparent"
+            onClick={closeMenu}
+          >
+            <span className="sr-only">Close navigation</span>
+          </button>
+          <div className="relative z-10 mx-4 mt-4 flex flex-col rounded-3xl bg-zinc-950 px-6 py-10 shadow-xl mobile-menu-panel">
+            <div className="flex flex-col gap-6 text-base text-zinc-200">
+              {renderNavLinks(closeMenu)}
+              <a
+                href="https://github.com/MirrowApp"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 text-sm font-medium text-zinc-200 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                onClick={closeMenu}
+              >
+                <span>GitHub</span>
+                <span aria-hidden="true" className="size-6 fill-current">
+                  <GithubIcon />
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };

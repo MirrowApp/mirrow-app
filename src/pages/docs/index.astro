@@ -7,31 +7,69 @@ const firstElement = elements[0];
 ---
 
 <DocsLayout slug="overview">
-  <h1 class="text-4xl font-black">Mirrow element docs</h1>
+  <h1 class="text-4xl font-black">Getting started with Mirrow</h1>
   <p>
-    This guide is generated directly from <code>ATTRIBUTES.md</code> so it always reflects the
-    current compiler surface. Pick an element from the navigation on the left to browse its
-    supported attributes.
+    Mirrow is a command-line compiler that turns ergonomic <code>.mirrow</code> source
+    into production-ready SVG. The reference on the left catalogues every element
+    Mirrow understands, but you can experience the workflow in seconds with a single
+    command.
   </p>
+  <h2>One-command quickstart</h2>
   <p>
-    Need to refresh the docs after editing attributes? Run <code>npm run generate:docs</code> and the
-    site will rebuild the element pages automatically.
+    Run Mirrow directly with <code>npx</code>, pointing it at your input file
+    and the SVG you want it to produce:
   </p>
-  {firstElement ? (
-    <section>
-      <h2>Jump in</h2>
-      <p>
-        Start with <a href={`/docs/${firstElement.slug}`}><code>&lt;{firstElement.name}&gt;</code></a> or jump
-        directly to any element from the index.
-      </p>
-    </section>
-  ) : (
-    <section>
-      <h2>No elements found</h2>
-      <p>
-        It looks like the generator has not produced any entries yet. Update <code>ATTRIBUTES.md</code> and
-        re-run <code>npm run generate:docs</code> to populate the docs.
-      </p>
-    </section>
-  )}
+  <pre><code>npx mirrow -i file.mirrow -o file.svg</code></pre>
+  <p>
+    This downloads the latest CLI, compiles <code>file.mirrow</code>, and writes
+    the output to <code>file.svg</code>. Swap in any paths you like. Mirrow will
+    create the SVG if it does not exist, or overwrite it with fresh output.
+  </p>
+  <h2>Zero-to-output example</h2>
+  <p>
+    Want to see the full flow? Drop into a fresh directory and paste this
+    snippet. It writes a sample <code>.mirrow</code> file, compiles it, and leaves the
+    generated SVG beside it:
+  </p>
+  <pre><code>{String.raw`cat <<'EOF' > demo.mirrow
+svg {
+  box: (0, 0, 200, 200)
+
+  circle {
+    at: (100, 100)
+    r: 40
+    fill: "hotpink"
+
+    animate {
+      prop: "r"
+      from: 40
+      to: 60
+      dur: 2s
+      repeat: indefinite
+    }
+  }
+}
+EOF
+
+npx mirrow -i demo.mirrow -o demo.svg
+`}</code></pre>
+  <p>
+    Open <code>demo.svg</code> in any vector viewer to watch the animated circle, and
+    rerun the command whenever you tweak <code>demo.mirrow</code>.
+  </p>
+  {
+    firstElement ? (
+      <section>
+        <h2>Dive into the element index</h2>
+        <p>
+          Start with{" "}
+          <a href={`/docs/${firstElement.slug}`}>
+            <code>{firstElement.name}</code>
+          </a>{" "}
+          to explore the attributes Mirrow expands for each SVG element, then
+          continue through the catalog using the navigation.
+        </p>
+      </section>
+    ) : null
+  }
 </DocsLayout>
