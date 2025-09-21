@@ -1,6 +1,6 @@
 # Mirrow
 
-Mirrow is a tiny Astro experiment focused on making SVGs effortless. Design, style, and animate everything in one file and export code that works for React, Svelte, and other frameworks—no extra CSS or scripts required.
+Mirrow is a tiny Astro experiment focused on making SVGs effortless.
 
 ## Getting Started
 - Install dependencies: `npm install`
