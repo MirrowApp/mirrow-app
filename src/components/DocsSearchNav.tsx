@@ -1,10 +1,4 @@
-import {
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  type ChangeEvent,
-} from "react";
+import { useEffect, useMemo, useRef, useState, type ChangeEvent } from "react";
 
 type NavItem = {
   name: string;
@@ -20,7 +14,6 @@ type DocsSearchNavProps = {
 
 const staticNavItems: NavItem[] = [
   { name: "Getting started", slug: "overview", href: "/docs" },
-  { name: "Installation", slug: "installation", href: "/docs/installation" },
 ];
 
 const baseLinkClasses =
