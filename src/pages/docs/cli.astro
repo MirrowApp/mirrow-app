@@ -1,0 +1,19 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+---
+
+<DocsLayout>
+  <h1>Mirrow CLI in a Nutshell</h1>
+  <p>
+    The Mirrow CLI takes a <code>.mirrow</code> file and compiles it into clean SVG.
+    One command turns your DSL into a production ready asset.
+  </p>
+
+  <pre><code>npx mirrow -i icon.mirrow -o icon.svg</code></pre>
+
+  <p>
+    The CLI handles parsing, validation (numbers, tuples, CSS exceptions, hex
+    colors), and codegen. Use it locally, in CI, or inside build scripts to
+    generate icons, graphics, and animations on demand.
+  </p>
+</DocsLayout>

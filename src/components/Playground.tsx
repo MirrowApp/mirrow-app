@@ -18,6 +18,7 @@ const Playground = () => {
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<"idle" | "loading">("loading");
   const editorContainerRef = useRef<HTMLDivElement | null>(null);
+  const outputContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!editorContainerRef.current) {
@@ -236,6 +237,39 @@ const Playground = () => {
     };
   }, [source]);
 
+  useEffect(() => {
+    const container = outputContainerRef.current;
+
+    if (!container) {
+      return;
+    }
+
+    container.replaceChildren();
+
+    if (!svg) {
+      return;
+    }
+
+    const template = document.createElement("template");
+    template.innerHTML = svg;
+
+    const fragment = template.content;
+    const scriptNodes = Array.from(fragment.querySelectorAll("script"));
+
+    scriptNodes.forEach((oldScript) => {
+      const newScript = document.createElement("script");
+
+      Array.from(oldScript.attributes).forEach((attr) => {
+        newScript.setAttribute(attr.name, attr.value);
+      });
+
+      newScript.textContent = oldScript.textContent ?? "";
+      oldScript.parentNode?.replaceChild(newScript, oldScript);
+    });
+
+    container.appendChild(fragment);
+  }, [svg]);
+
   return (
     <div className="flex flex-col gap-6 md:flex-row md:gap-8">
       <section className="flex w-full flex-col gap-3 md:w-1/2">
@@ -273,10 +307,7 @@ const Playground = () => {
             </div>
           ) : svg ? (
             <div className="max-h-full w-full max-w-full mx-auto overflow-auto">
-              <div
-                className="mx-auto w-fit"
-                dangerouslySetInnerHTML={{ __html: svg }}
-              ></div>
+              <div ref={outputContainerRef} className="mx-auto w-fit" />
             </div>
           ) : (
             <p className="text-sm text-zinc-500">

@@ -1,0 +1,48 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+---
+
+<DocsLayout>
+  <section>
+    <h2>States and Events</h2>
+    <p>
+      Mirrow separates visual state from behavior. Use <code
+        >@hover {String.raw`{ ... }`}</code
+      > for CSS state driven overrides, and <code>on:*</code> blocks for JavaScript
+      events.
+    </p>
+
+    <h3>CSS State</h3>
+    <p>State blocks compile to hover focused overrides without runtime JS.</p>
+    <pre><code>{String.raw`rect {
+  at: (16, 16) size: (128, 64) rx: 8
+  fill: "#4f46e5"
+
+  @hover {
+    fill: "#6366f1"
+    stroke: "#ffffff"
+  }`}
+}</code></pre>
+
+    <h3>JS Events</h3>
+    <p>
+      Event blocks run JavaScript in response to user actions. The handler runs
+      in the element context. Just as with CSS States all JavaScript events are
+      supported.
+    </p>
+    <pre><code>{String.raw`g {
+  id: "panel"
+  class: "closed"
+
+  on:click {
+    console.log("Hello World");
+  }`}
+}</code></pre>
+
+    <p>
+      Other variants: <code>@focus</code>, <code>@active</code>, and events like <code
+        >on:mouseenter</code
+      >, <code>on:mouseleave</code>, <code>on:input</code>.
+    </p>
+  </section>
+</DocsLayout>

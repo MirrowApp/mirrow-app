@@ -1,0 +1,88 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+---
+
+<DocsLayout
+  ><section>
+    <h2>Hello World in Mirrow</h2>
+    <p>
+      At its core, Mirrow is a domain-specific language (DSL) designed to make
+      writing and reasoning about SVGs much simpler. Instead of juggling verbose
+      XML syntax or deeply nested HTML, Mirrow gives you a structured, code-like
+      way of describing your graphics, shapes, and animations. This “Hello
+      World” example demonstrates just how minimal the language can be while
+      still producing a fully functional SVG that renders in any browser.
+    </p>
+
+    <p>
+      In Mirrow, every document begins with an <code>svg</code> block that defines
+      the canvas. Inside that, you can declare shapes such as <code>circle</code
+      >, <code>rect</code>, or <code>text</code>. Attributes are provided in a
+      compact tuple-based syntax, and text content is written directly inside
+      the <code>text</code> block. Below is the simplest form of a “Hello World”
+      program in Mirrow. You can copy and paste this into the Mirrow CLI or REPL
+      to see it compile down to SVG.
+    </p>
+
+    <pre><code>{String.raw`
+svg {
+  size: (400, 200)
+  box: (0, 0, 400, 200)
+
+  text {
+    at: (200, 100)
+    "Hello, World!"
+  }
+}
+`}</code></pre>
+
+    <p>
+      This short snippet produces an SVG that is 400 by 200 pixels with a simple
+      text element positioned in the center. Notice how the syntax avoids raw
+      XML, there are no angle brackets or closing tags, only structured
+      declarations. The <code>size</code>
+      sets the rendered width and height, while <code>box</code> defines the viewBox
+      coordinates. The <code>text</code> block then places the string <em
+        >Hello, World!</em
+      > at the position (200, 100) relative to the canvas.
+    </p>
+  </section>
+  <section>
+    <h2>Using <code>style</code> and <code>script</code> Blocks</h2>
+    <p>
+      In Mirrow, <code>style</code> and <code>script</code> blocks can live right
+      beside your <code>svg</code> block. This allows you to attach custom CSS rules
+      and JavaScript event handlers without leaving the DSL. The compiler will output
+      them as proper
+      <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> tags alongside your
+      SVG, keeping everything self-contained in one document.
+    </p>
+
+    <pre><code>{String.raw`
+svg {
+  size: (200, 200)
+  box: (0, 0, 200, 200)
+
+  circle {
+    id: "dot"
+    at: (100, 100)
+    r: 40
+    fill: "hotpink"
+    on:click {
+      console.log("Circle clicked!")
+    }
+  }
+}
+
+style {
+  #dot:hover {
+    fill: "lightcoral";
+  }
+}
+
+script {
+  console.log("Mirrow script block loaded");
+}
+`}</code></pre>
+  </section>
+</DocsLayout>

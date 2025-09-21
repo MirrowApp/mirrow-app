@@ -14,6 +14,9 @@ type DocsSearchNavProps = {
 
 const staticNavItems: NavItem[] = [
   { name: "Getting started", slug: "overview", href: "/docs" },
+  { name: "Hello World", slug: "hello-world" },
+  { name: "States/Events", slug: "states-events" },
+  { name: "CLI", slug: "cli" },
 ];
 
 const baseLinkClasses =
