@@ -236,7 +236,7 @@ const Header = () => {
     ));
 
   return (
-    <div className="px-4 md:px-0">
+    <div className="p-4 xl:p-0">
       <div className={containerClasses}>
         <div className="flex w-full items-center gap-4">
           <a href="/" className="flex gap-4">

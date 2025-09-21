@@ -29,11 +29,11 @@ const activeSlug = derivedSlug || pathBasedSlug;
   <div class="flex min-h-screen bg-black text-white">
     <aside
       id="docs-nav"
-      class="fixed inset-y-0 left-0 z-40 flex w-64 max-w-full -translate-x-full flex-col border-r border-zinc-700/60 px-6 py-8 transition-transform duration-200 ease-in-out md:w-72 md:translate-x-0"
+      class="fixed inset-y-0 left-0 z-40 flex w-64 max-w-full -translate-x-full flex-col border-r border-zinc-700/60 px-6 py-8 transition-transform duration-200 ease-in-out xl:w-72 xl:translate-x-0"
       data-open="false"
       tabindex="-1"
     >
-      <div class="flex items-start justify-between gap-4 md:block">
+      <div class="flex items-start justify-between gap-4 xl:block">
         <div class="space-y-2">
           <p class="text-[0.65rem] uppercase tracking-[0.3em] text-zinc-500">
             Index
@@ -42,7 +42,7 @@ const activeSlug = derivedSlug || pathBasedSlug;
         </div>
         <button
           type="button"
-          class="rounded-xl border border-white/10 px-3 py-2 text-sm font-medium text-white transition hover:border-white/30 hover:text-white md:hidden"
+          class="rounded-xl border border-white/10 px-3 py-2 text-sm font-medium text-white transition hover:border-white/30 hover:text-white xl:hidden"
           data-docs-nav-close
         >
           Close
@@ -52,7 +52,7 @@ const activeSlug = derivedSlug || pathBasedSlug;
     </aside>
     <div class="flex flex-1 flex-col">
       <header
-        class="top-0 z-20 flex items-center justify-between border-b border-white/10 bg-black/80 px-4 py-4 backdrop-blur-2xl md:hidden"
+        class="top-0 z-20 flex items-center justify-between border-b border-white/10 bg-black/80 px-4 py-4 backdrop-blur-2xl xl:hidden"
       >
         <button
           type="button"
@@ -86,7 +86,7 @@ const activeSlug = derivedSlug || pathBasedSlug;
       </main>
     </div>
     <div
-      class="pointer-events-none fixed inset-0 z-30 bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-200 md:hidden"
+      class="pointer-events-none fixed inset-0 z-30 bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-200 xl:hidden"
       data-docs-nav-overlay
     >
     </div>
